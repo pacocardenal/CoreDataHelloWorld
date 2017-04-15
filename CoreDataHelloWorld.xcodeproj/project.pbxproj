@@ -14,6 +14,7 @@
 		E39A39BE1EA214C400663E56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E39A39BC1EA214C400663E56 /* Main.storyboard */; };
 		E39A39C01EA214C400663E56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E39A39BF1EA214C400663E56 /* Assets.xcassets */; };
 		E39A39C31EA214C400663E56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E39A39C11EA214C400663E56 /* LaunchScreen.storyboard */; };
+		E39A39D21EA26E3E00663E56 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39A39D11EA26E3E00663E56 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		E39A39C21EA214C400663E56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E39A39C41EA214C400663E56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E39A39D01EA21B0A00663E56 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E39A39D11EA26E3E00663E56 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		E39A39CC1EA21AC600663E56 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				E39A39D11EA26E3E00663E56 /* CoreDataManager.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				E39A39B71EA214C400663E56 /* CoreDataHelloWorld.xcdatamodeld in Sources */,
 				E39A39B41EA214C400663E56 /* AppDelegate.swift in Sources */,
 				E39A39B91EA214C400663E56 /* MasterViewController.swift in Sources */,
+				E39A39D21EA26E3E00663E56 /* CoreDataManager.swift in Sources */,
 				E39A39BB1EA214C400663E56 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
