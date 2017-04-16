@@ -17,8 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
         let masterNavigationController = splitViewController.viewControllers[0] as! UINavigationController
         let controller = masterNavigationController.topViewController as! MasterViewController
-        self.context = self.coreDataManager.persistentContainer(dbName: "CoreDataHelloWorld").viewContext
+        
+        let persistentContainer: NSPersistentContainer = self.coreDataManager.persistentContainer(dbName: "CoreDataHelloWorld")
+        self.context = persistentContainer.viewContext
+        
         controller.managedObjectContext = self.context
+        
+        testZone()
         
         return true
     }
@@ -37,6 +42,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
             return true
         }
         return false
+    }
+    
+    func testZone() {
+        
+        let event1 = Event(context: self.context!)
+        event1.timestamp = NSDate()
+        
+        let event2 = Event(context: self.context!)
+        event2.timestamp = NSDate()
+        
+        let paco = Person(context: self.context!)
+        paco.name = "Paco"
+        paco.address = "Los Sauces"
+        
+        self.coreDataManager.saveContext(context: self.context!)
+        
     }
 
 }
