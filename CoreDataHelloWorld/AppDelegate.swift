@@ -46,17 +46,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     
     func testZone() {
         
-        let event1 = Event(context: self.context!)
+        guard let context = self.context else { return }
+        
+        let event1 = Event(context: context)
         event1.timestamp = NSDate()
         
-        let event2 = Event(context: self.context!)
+        let event2 = Event(context: context)
         event2.timestamp = NSDate()
         
-        let paco = Person(context: self.context!)
+        let paco = Person(context: context)
         paco.name = "Paco"
         paco.address = "Los Sauces"
         
-        self.coreDataManager.saveContext(context: self.context!)
+        let _ = Person(context: context, name: "Manolo")
+        
+        self.coreDataManager.saveContext(context: context)
         
     }
 

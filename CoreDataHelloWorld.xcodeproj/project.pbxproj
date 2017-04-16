@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E323B5E61EA35B830051A9A6 /* Person+Inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = E323B5E51EA35B830051A9A6 /* Person+Inits.swift */; };
 		E39A39B41EA214C400663E56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39A39B31EA214C400663E56 /* AppDelegate.swift */; };
 		E39A39B71EA214C400663E56 /* CoreDataHelloWorld.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E39A39B51EA214C400663E56 /* CoreDataHelloWorld.xcdatamodeld */; };
 		E39A39B91EA214C400663E56 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39A39B81EA214C400663E56 /* MasterViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E323B5E51EA35B830051A9A6 /* Person+Inits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+Inits.swift"; sourceTree = "<group>"; };
 		E39A39B01EA214C400663E56 /* CoreDataHelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataHelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E39A39B31EA214C400663E56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E39A39B61EA214C400663E56 /* CoreDataHelloWorld.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataHelloWorld.xcdatamodel; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				E39A39B51EA214C400663E56 /* CoreDataHelloWorld.xcdatamodeld */,
+				E323B5E51EA35B830051A9A6 /* Person+Inits.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			files = (
 				E39A39B71EA214C400663E56 /* CoreDataHelloWorld.xcdatamodeld in Sources */,
 				E39A39B41EA214C400663E56 /* AppDelegate.swift in Sources */,
+				E323B5E61EA35B830051A9A6 /* Person+Inits.swift in Sources */,
 				E39A39B91EA214C400663E56 /* MasterViewController.swift in Sources */,
 				E39A39D21EA26E3E00663E56 /* CoreDataManager.swift in Sources */,
 				E39A39BB1EA214C400663E56 /* DetailViewController.swift in Sources */,
@@ -362,6 +366,7 @@
 				E39A39C91EA214C400663E56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
