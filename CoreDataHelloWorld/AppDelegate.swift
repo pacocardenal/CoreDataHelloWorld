@@ -48,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         
         guard let context = self.context else { return }
         
+        // Add objects
         let event1 = Event(context: context)
         event1.timestamp = NSDate()
         
@@ -58,8 +59,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         paco.name = "Paco"
         paco.address = "Los Sauces"
         
-        let _ = Person(context: context, name: "Manolo")
+        let manolo = Person(context: context, name: "Manolo")
         
+        // Insert pending objects
+        print("🍎 \(context.insertedObjects.count)")
+        
+        self.coreDataManager.saveContext(context: context)
+        
+        // Delete objects
+        context.delete(manolo)
+        print("🍋 \(manolo.isDeleted)")
         self.coreDataManager.saveContext(context: context)
         
     }
