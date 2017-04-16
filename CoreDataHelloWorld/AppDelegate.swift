@@ -71,6 +71,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         print("🍋 \(manolo.isDeleted)")
         self.coreDataManager.saveContext(context: context)
         
+        // Fetch objects
+        let fetchRequest: NSFetchRequest<Person> = Person.fetchRequest()
+        
+        fetchRequest.fetchBatchSize = 10
+        
+        let orderByName = NSSortDescriptor(key: "name", ascending: true)
+        let orderByAddress = NSSortDescriptor(key: "address", ascending: true)
+        fetchRequest.sortDescriptors = [orderByName, orderByAddress]
+        
+        do {
+            let result = try context.fetch(fetchRequest)
+            print("Num records \(result.count)")
+            
+            for person in result {
+                print("Name \(person.name), address \(person.address)")
+            }
+        } catch {
+            print("Error in fetch")
+        }
+        
     }
 
 }
